@@ -1,0 +1,30 @@
+#Andreas Nugroho
+#71200646
+#seorang mekanik sedang melakukan list barang pada setiap rak yang berisi berbagai peralatan bengkel. bantu seorang mekanik menentukan 
+#berapa banyak setiap barang yang ada dalam list tersebut.
+
+#input 
+#sudah dalam program
+
+#proses
+#perulangan dan tuple
+
+#ouput
+#jumlah setiap barang 
+#total 
+
+def hitung (barang):
+    hasil = ""
+    simpan = list(set(barang))
+    jumlah_jenis_barang = len(simpan)
+    jumlah_barang = len(barang)
+    for i in range(jumlah_jenis_barang):
+        n = 0
+        for j in range(jumlah_barang):
+            if simpan[i] == barang[j]:
+                n = n+1
+        hasil = hasil+str(simpan[i])+" sejumlah : "+str(n)+"\n"
+    hasil = hasil+"Total seluruh barang: "+str(jumlah_barang)
+    return print(hasil)
+barang = ('baut','dongkrak','obeng','tang','pompa','kunci l','obeng','baut','obeng')
+hitung(barang)
